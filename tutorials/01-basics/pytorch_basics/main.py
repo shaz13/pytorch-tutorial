@@ -23,9 +23,9 @@ import torchvision.transforms as transforms
 # ================================================================== #
 
 # Create tensors.
-x = torch.tensor(1, requires_grad=True)
-w = torch.tensor(2, requires_grad=True)
-b = torch.tensor(3, requires_grad=True)
+x = torch.tensor(1., requires_grad=True)
+w = torch.tensor(2., requires_grad=True)
+b = torch.tensor(3., requires_grad=True)
 
 # Build a computational graph.
 y = w * x + b    # y = 2 * x + 3
@@ -133,7 +133,7 @@ for images, labels in train_loader:
 #                5. Input pipline for custom dataset                 #
 # ================================================================== #
 
-# You should your build your custom dataset as below.
+# You should build your custom dataset as below.
 class CustomDataset(torch.utils.data.Dataset):
     def __init__(self):
         # TODO
